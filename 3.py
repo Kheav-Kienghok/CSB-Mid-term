@@ -3,7 +3,7 @@ import asyncio
 
 async def fetch(session, url):
     async with session.get(url) as response:
-        return response.text()
+        return await response.text()
 
 async def main():
     urls = [
